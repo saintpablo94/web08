@@ -17,12 +17,12 @@ public class Test {
 		System.out.println("tire 2 ---> "+tire2.toString());
 		System.out.println("tire 3 ---> "+tire3.toString());
 		
-		/*if(tire1 != tire2){
+		if(tire1 != tire2){
 			System.out.println("tire1 != tire2");
 		}
 		
 		if(tire1 == tire3){
 			System.out.println("tire1 == tire3");
-		}*/
+		}
 	}
 }

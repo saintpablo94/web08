@@ -5,11 +5,12 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	 					   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="hankookTire" class="exam.test11.TireFactory" factory-method="createTire">
+	<bean id="tireFactory" class="exam.test12.TireFactory" />
+	<bean id="hankookTire" factory-bean="tireFactory" factory-method="createTire">
 		<constructor-arg value="Hankook" />
 	</bean>
 	
-	<bean id="kumhoTire" class="exam.test11.TireFactory" factory-method="createTire" >
+	<bean id="kumhoTire" factory-bean="tireFactory" factory-method="createTire" >
 		<constructor-arg value="Kumho" />
 	</bean>
 </beans>

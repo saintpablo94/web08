@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Properties;
 
 public class TireFactory {
-	public static Tire createTire(String maker) {
+	public Tire createTire(String maker) {
 		if (maker.equals("Hankook")) {
 			return createHankookTire();
 		} else {
@@ -13,7 +13,7 @@ public class TireFactory {
 		}
 	}
 
-	private static Tire createKumhoTire() {
+	private Tire createKumhoTire() {
 		Tire tire = new Tire();
 		tire.setMaker("Kumho");
 
@@ -34,7 +34,7 @@ public class TireFactory {
 		return tire;
 	}
 
-	private static Tire createHankookTire() {
+	private Tire createHankookTire() {
 		Tire tire = new Tire();
 		tire.setMaker("Hankook");
 		Properties specProp = new Properties();
