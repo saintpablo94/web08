@@ -1,12 +1,13 @@
 package exam.test15;
 
 import java.text.SimpleDateFormat;
-import java.util.Map.Entry;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Test {
 
+
+public class Test {
+	
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("exam/test15/beans.xml");
 		

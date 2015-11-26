@@ -1,7 +1,5 @@
 package exam.test13;
 
-import java.util.Map.Entry;
-
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test {

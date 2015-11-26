@@ -11,10 +11,12 @@ public class JavaEightTest {
 		// TODO Auto-generated method stub
 
 		Function<String, Integer> toInt = (value) -> Integer.parseInt(value);
-
 		System.out.println(toInt.apply("100"));
 		
+		Function<Integer, Integer> identity = t -> t;
 		
+		System.out.println(identity.apply(999));
+				
 		Consumer<String> println = (value) -> System.out.println("Hello "+ value);
 		
 		println.accept("world");
@@ -25,7 +27,7 @@ public class JavaEightTest {
 		
 		Supplier checkType = () -> "Hello" ;
 		
-		System.out.println(checkType);
+		System.out.println(checkType.get());
 	}
 		
 	
