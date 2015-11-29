@@ -29,7 +29,4 @@ public class JavaEightTest {
 		
 		System.out.println(checkType.get());
 	}
-		
-	
-
 }
