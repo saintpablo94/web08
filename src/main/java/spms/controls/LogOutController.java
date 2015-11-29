@@ -4,7 +4,8 @@ import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
-import spms.annotation.Component;
+import org.springframework.stereotype.Component;
+
 
 // Annotation 적용
 @Component("/auth/logout.do")

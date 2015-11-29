@@ -2,7 +2,9 @@ package spms.controls;
 
 import java.util.Map;
 
-import spms.annotation.Component;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import spms.bind.DataBinding;
 import spms.controls.Controller;
 import spms.dao.ProjectDao;
@@ -12,6 +14,7 @@ import spms.vo.Project;
 public class ProjectUpdateController implements Controller, DataBinding {
   ProjectDao projectDao;
   
+  @Autowired
   public ProjectUpdateController setProjectDao(ProjectDao projectDao) {
     this.projectDao = projectDao;
     return this;
