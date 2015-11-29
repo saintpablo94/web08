@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	 					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+	 					   
+	<bean id="dataFormat" class="java.text.SimpleDateFormat">
+		<constructor-arg value="yyyy-mm-dd" />
+	</bean>
+	
+	<bean id="dataEditor" class="org.springframework.beans.propertyeditors.CustomDateEditor" >
+		<constructor-arg ref="dataFormat" />
+		<constructor-arg value="true" />
+	</bean>
+	
+	<bean id="customPropertyEditorRegistara" class="exam.test16.CustomPropertyEditorRegistrar" >
+		<property name="customDateEditor" ref="dataEditor"/>
+	</bean>
+	
+	<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+		<property name="propertyEditorRegistrars">
+			<list>
+				<ref bean="customPropertyEditorRegistara" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="hyundaiEngine" class="exam.test17.Engine">
+		<constructor-arg value="Hyundai" />
+	</bean>
+	
+	<bean id="car1" class="exam.test17.Car" >
+		<property name="model" value="Sonata" />
+	</bean>
+	
+	<bean id="car2" class="exam.test17.Car" >
+		<property name="model" value="Grandeur" />
+	</bean>
+	
+<!-- 	<bean id="hankookTire" class="exam.test16.Tire">
+		<property name="maker" value="Hankook" />
+		<property name="createDate" value="2014-5-5" />
+	</bean>
+	
+	<bean id="kumhoTire" class="exam.test16.Tire">
+		<property name="maker" value="kumho" />
+		<property name="createDate"  value="2014-1-14" />
+	</bean> -->
+</beans>

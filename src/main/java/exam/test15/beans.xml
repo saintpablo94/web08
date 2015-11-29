@@ -13,7 +13,7 @@
 		<property name="maker" value="Hankook" />
 		<property name="createDate">
 			<bean factory-bean="dataFormat" factory-method="parse">
-				<constructor-arg value="2014-5-5" />
+				<constructor-arg value="2015-5-5" />
 			</bean>
 		</property>
 	</bean>
@@ -22,7 +22,7 @@
 		<property name="maker" value="kumho" />
 		<property name="createDate">
 			<bean factory-bean="dataFormat" factory-method="parse">
-				<constructor-arg value="2014-1-14" />
+				<constructor-arg value="2015-1-14" />
 			</bean>
 		</property>
 	</bean>

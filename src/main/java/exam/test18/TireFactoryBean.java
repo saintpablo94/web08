@@ -1,4 +1,4 @@
-package exam.test15;
+package exam.test18;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -32,13 +32,13 @@ public class TireFactoryBean extends AbstractFactoryBean<Tire> {
 		specProp.setProperty("rim.diameter", "16");
 		tire.setSpec(specProp);
 
-		/*SimpleDateFormat dataFormat = new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat dataFormat = new SimpleDateFormat("yyyy-MM-dd");
 
 		try {
 			tire.setCreateDate(dataFormat.parse("2014-03-01"));
 		} catch (ParseException e) {
 			e.printStackTrace();
-		}*/
+		}
 
 		return tire;
 	}
@@ -52,11 +52,11 @@ public class TireFactoryBean extends AbstractFactoryBean<Tire> {
 		specProp.setProperty("rim.diameter", "14");
 		tire.setSpec(specProp);
 
-		/*SimpleDateFormat dataFormat = new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat dataFormat = new SimpleDateFormat("yyyy-MM-dd");
 		try {
 			tire.setCreateDate(dataFormat.parse("2014-05-05"));
 		} catch (Exception e) {
-		}*/
+		}
 
 		return tire;
 	}
